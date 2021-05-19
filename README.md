@@ -1,5 +1,26 @@
 # Assignment
 
+## Topic Covered:
+
+#### input 
+
+#### output 
+
+#### service 
+
+#### subject 
+
+#### lazy loading 
+
+#### guard 
+
+#### component 
+
+#### http call 
+
+#### pipe 
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
 
 ## Development server
