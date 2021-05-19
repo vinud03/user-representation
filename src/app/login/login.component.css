@@ -1,0 +1,25 @@
+span{
+    position: relative;
+    color: #f00;
+    font-size: 12px;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 2px 5px;
+    width: 100%;
+}
+
+.full-width-control{
+    width: 100%;
+}
+
+.row{
+    margin-bottom: 20px;
+}
+
+input{
+    margin-top: 3px;
+}

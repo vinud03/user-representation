@@ -1,0 +1,77 @@
+<app-header></app-header>
+<div class="container">
+    <div class="card-group">
+        <div class="row">
+            <div class="col" *ngFor="let res of response">
+                <div class="card" style="width: 50rem;" *ngIf='id ==res.id'>
+                    <div class="card-body">
+                        <span class="card-title" id='title'>{{res.name}}</span>
+                        <span class="card-title2" id='detail'>{{res.email}}</span>
+                        <span class="card-title2" id='detail'>{{res.phone}}</span>
+                    </div>
+                    <div class="card-action">
+                        <!-- <button class="waves-effect waves-light btn" (click)="Profile(d.id)">View Profile</button> -->
+                        <button class="waves-effect waves-light btn" (click)="getDetails(res.id)">Details</button>
+                        <button class="waves-effect waves-light btn" (click)="showAlbum(res.id)">Albums</button>
+                        <button class="waves-effect waves-light btn" (click)="showPost(res.id)">Posts</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf='status.album'>
+    <h2>Albums</h2>
+    <div class="card-group">
+        <div class="row">
+            <div class="col" style="width: 500px;" *ngFor='let d of albumData'>
+                <div class="card" style="width: 400px; height: 200px;">
+                    <div class="card-body size">
+                        <span class="card-title" id='title'>Title : {{d.title}}</span>
+                        <span class="card-title2" id='detail'>Id : {{d.id}}</span>
+                        <span class="card-title2" id='detail'>userId : {{d.userId}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100"></div>
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf='status.post'>
+    <h2>Posts</h2>
+    <div class="row">
+        <div class="col" *ngFor='let p of postsData'>
+            <div class="card" style="width: 400px; height: 250px;">
+                <div class="card-body">
+                    <span class="card-title" id='title'>Title : {{p.title}}</span>
+                    <span class="card-title2" id='detail'>Id : {{p.id}}</span>
+                    <span class="card-title2" id='detail'>userId : {{p.userId}}</span>
+                    <span class="card-title2" id='detail'>body : {{p.body}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf='status.details'>
+    <h2>Details</h2>
+    <div class="card" style="width: 50rem;">
+        <div class="card-body">
+            <span class="card-title" id='title'><strong>{{details.name}}</strong></span>
+            <span class="card-title2" id='detail'><strong>Id</strong> : {{details.id}}</span>
+            <span class="card-title2" id='detail'><strong>UserName</strong> : {{details.username}}</span>
+            <span class="card-title2" id='detail'><strong>Email</strong> : {{details.email}} </span>
+            <span class="card-title2" id='detail'><strong>Address</strong> : <address style="display: inline">
+                    {{details.address.street}}, {{details.address.suite}}, <br>
+                    {{details.address.city}}, {{details.address.zipcode}}
+                </address>
+            </span>
+            <span class="card-title2" id='detail'><strong>Website</strong> : {{details.website}} </span>
+            <span class="card-title2" id='detail'><strong>Company</strong> : <ul>
+                    <li>Name : {{details.company.name}}</li>
+                    <li>Catch Phrase : {{details.company.catchPhrase}}</li>
+                    <li>bs : {{details.company.bs}}</li>
+                </ul> </span>
+
+        </div>
+    </div>
+</div>

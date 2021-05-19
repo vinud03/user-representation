@@ -1,0 +1,27 @@
+button{
+  margin-right: 5px
+}
+
+  #detail{
+    display: block;
+    margin: 5px;
+  }
+  .card-size{
+    width:350px;
+    height:150px
+  }
+
+  div.col{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    background-position: center center;
+  }
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #title{
+    margin-bottom: 30px;
+  }

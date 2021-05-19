@@ -1,0 +1,28 @@
+.full-width{
+    width:80%
+}
+
+span{
+    display: block;
+}
+/* .col{
+  width: 400px
+} */
+
+#detail{
+    display: block;
+    margin: 5px;
+  }
+
+  button{
+    margin-right: 5px;
+  }
+
+  #title{
+    margin-bottom: 30px;
+  }
+
+  .size{
+    width:350px;
+    height:150px
+  }
